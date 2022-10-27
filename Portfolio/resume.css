@@ -1,0 +1,359 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #60972c;
+    --main-blue: #cbec6f;
+    --main-gray: #374430;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+nav {
+    background-color: #145c46;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.nav-list a {
+    color: var(--main-white);
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-right: 30px;
+    font-size: 25px;
+    padding: 16px;
+}
+
+.nav-list a:hover {
+    background-color: var(--main-blue);
+}
+
+.nav-list li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.welcome-section {
+    background-color: var(--main-gray);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--main-white);
+    font-size: 60px;
+}
+
+#welcome-section>p {
+    color: var(--main-red);
+    font-size: 30px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.qualification-section {
+    text-align: left;
+    background-color: var(--main-white);
+    width: 100%;
+}
+
+.education-heading,
+.programming-lang-heading,
+.tech-skill-heading,
+.achievement-heading {
+    font-size: 30px;
+    color: var(--main-red);
+}
+
+#education {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.education_content {
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.education-year {
+    font-size: 15px;
+}
+
+.marks {
+    font-size: 15px;
+
+}
+
+.education-rounder {
+    position: relative;
+    display: block;
+    background-color: var(--main-white);
+    border: 4px solid var(--main-red);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+.education-line {
+    position: relative;
+    display: block;
+    background-color: var(--main-red);
+    width: 3px;
+    height: 140%;
+    transform: translate(6px, 0);
+    margin-left: 50px;
+}
+
+.education-container-grid {
+    display: grid;
+    gap: 50px;
+}
+
+.education-data-grid {
+    text-align: left;
+}
+
+.marks-flex {
+    display: flex;
+    gap: 180px;
+}
+
+.qualification-flex {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    color: var(--main-white);
+}
+
+.qual-flex {
+    background-color: var(--main-gray);
+    border: 2px solid var(--main-white);
+    height: 500px;
+    padding: 40px;
+}
+
+.lang-grid,
+.tech-skill-grid {
+    display: grid;
+    align-items: center;
+    gap: 50px;
+}
+
+.lang-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.lang-level {
+    width: 70%;
+    height: 7px;
+    border: 1px solid var(--main-white);
+    margin-top: 5px;
+    margin-left: 15%;
+}
+
+.c-lang-level {
+    background-color: var(--main-red);
+    width: 85%;
+    height: 7px;
+}
+
+.cpp-lang-level {
+    background-color: var(--main-red);
+    width: 88%;
+    height: 7px;
+}
+
+.html-lang-level {
+    background-color: var(--main-red);
+    width: 90%;
+    height: 7px;
+}
+
+.css-lang-level {
+    background-color: var(--main-red);
+    width: 70%;
+    height: 7px;
+}
+
+.ds-lang-level {
+    background-color: var(--main-red);
+    width: 50%;
+    height: 7px;
+}
+
+#programming-lang {
+    flex-grow: 2;
+}
+
+.tech-level ul {
+    display: grid;
+    grid-gap: 40px;
+}
+
+.tech-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.achievement {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+}
+.project-section-heading {
+    font-size: 40px;
+    padding: 100px;
+    color: var(--main-white);
+}
+
+.skill-level:hover{
+    color: var(--main-red);
+    transform: translateX(10px);
+    transition: transform 0.3s ease-out;
+}
+
+.project-section {
+    background-color: var(--main-blue);
+    padding-bottom: 80px;
+}
+
+.project-grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); */
+    grid-column-gap: 80px;
+    padding: 60px 150px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        /* grid-template-columns: 1fr; */
+        grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+        grid-column-gap: 20px;
+        padding: 30px 80px;
+    }
+}
+
+.project-image {
+    object-fit: cover;
+    display: block;
+    width: 300px;
+    height: 350px;   
+}
+
+.project-img {
+    text-decoration: none;
+    color: var(--main-white);
+     font-size: 15px; 
+}
+
+.project-tile{
+    width: 300px;
+    height: 400px;
+}
+
+.project-title {
+    padding: 20px;
+    border-top: 1px solid var(--main-blue);
+    background-color: var(--main-gray);
+}
+
+.code {
+    color: var(--main-gray);
+    transition: 0.3s ease-out;
+}
+
+.project-tile:hover .code {
+    color: var(--main-red);
+}
+
+.project-btn {
+    padding: 15px;
+    background-color: var(--main-gray);
+    border: none;
+    color: var(--main-white);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: var(--main-blue);
+}
+
+.project-btn:hover {
+    background-color: var(--main-red);   
+}
+
+.project-btn:hover>i {
+    margin-left: 10px;
+    transition: 0.3s ease-out;
+}
+
+.contact-section {
+    height: 92.6vh;
+    width: 100%;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.contact-link {
+    color: var(--main-white);
+    font-size: 24px;
+    padding: 20px 35px;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-link:hover {
+    transform: translateY(10px);
+}
+
+.contact-section>h3 {
+    font-size: 60px;
+}
